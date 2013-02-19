@@ -174,7 +174,7 @@ if (!jQuery.fn.jbhSlider) {
                                 left: 0,
                                 width: sets.css.width * count
                             }));
-                            sets.data.liList.css($.extend({}, (Object.keys(sets.elements.css).length ? sets.elements.css : sets.css), {
+                            sets.data.liList.css($.extend({}, ($.isEmptyObject(sets.elements.css) === true ? sets.elements.css : sets.css), {
                                 'float': 'left'
                             }));
                             $(sets.data.liList[0]).css({
